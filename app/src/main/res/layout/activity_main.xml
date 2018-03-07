@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <Button
+        android:id="@+id/bNew"
+        android:layout_width="165dp"
+        android:layout_height="71dp"
+        android:onClick="newRef"
+        android:text="+1"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/bDelete"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/bDelete"
+        android:layout_width="164dp"
+        android:layout_height="74dp"
+        android:onClick="deleteRef"
+        android:text="-1"
+        android:textSize="40sp"
+        android:textStyle="bold"
+        android:typeface="sans"
+        app:layout_constraintBottom_toTopOf="@+id/rbGroup"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bNew" />
+
+    <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/rbGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/tvCount"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bDelete">
+
+        <RadioButton
+            android:id="@+id/rbFlower"
+            android:layout_width="195dp"
+            android:layout_height="39dp"
+            android:checked="true"
+            android:onClick="selectNiceThing"
+            android:text=" Flower 🌷"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbCandy"
+            android:layout_width="195dp"
+            android:layout_height="43dp"
+            android:checked="false"
+            android:onClick="selectNiceThing"
+            android:text="Candy 🍬"
+            android:textSize="24sp" />
+
+        <RadioButton
+            android:id="@+id/rbBird"
+            android:layout_width="195dp"
+            android:layout_height="43dp"
+            android:checked="false"
+            android:onClick="selectNiceThing"
+            android:text="Bird 🐦"
+            android:textSize="24sp" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvCount"
+        android:layout_width="100dp"
+        android:layout_height="105dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        android:textAlignment="center"
+        android:textSize="60sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rbGroup" />
+
+
+</android.support.constraint.ConstraintLayout>
