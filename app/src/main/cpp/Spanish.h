@@ -8,26 +8,26 @@ public:
     Spanish(Callback &body) : body_(body) {}
 
     __attribute__ ((noinline)) void Uno() {
-        II();
+        Dos();
     }
 
-    __attribute__ ((noinline)) void II() {
-        III();
+    __attribute__ ((noinline)) void Dos() {
+        Tres();
     }
 
-    __attribute__ ((noinline)) void III() {
-        IV();
+    __attribute__ ((noinline)) void Tres() {
+        Cuatro();
     }
 
-    __attribute__ ((noinline)) void IV() {
-        V();
+    __attribute__ ((noinline)) void Cuatro() {
+        Cinco();
     }
 
-    __attribute__ ((noinline)) void V() {
-        VI();
+    __attribute__ ((noinline)) void Cinco() {
+        Seis();
     }
 
-    __attribute__ ((noinline)) void VI() {
+    __attribute__ ((noinline)) void Seis() {
         Siete();
     }
 
